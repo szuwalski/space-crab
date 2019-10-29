@@ -1,0 +1,11 @@
+Versions
+
+spatial_size_1 : nature space
+spatial_size_2: log space
+spatial_size_3: re-parameterized L_val
+spatial_size_4: same as version 2 except turning off recruitment random effect
+spatial_size_5: same as version 4 except re-parameterized L_val
+spatial_size_6: sex separated
+spatial_size_7: add logistic selectivity
+spatial_size_8: model for no terminal molt
+spatial_size_9: same as 8 except selectivity is size-specific parameters
