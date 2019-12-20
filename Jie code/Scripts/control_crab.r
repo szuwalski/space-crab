@@ -2,12 +2,12 @@
 ###################### deterministic data ######################
 #simulate true population - snow crab in the East Bering Sea
 movement = FALSE
-system.time(source('/Users/jiecao/Desktop/UW_work/model_devp/simulator/simulator_rcodes/simulator_sp01.r'))
+system.time(source('Jie code/simulator_rcodes/simulator_sp01.r'))
 
 #generate data
 sampling_error=FALSE
 n_loc_sample = 200
-source('/Users/jiecao/Desktop/UW_work/model_devp/simulator/simulator_rcodes/simulator_genData.r')
+source('simulator_genData.r')
 
 # configurations in spatial_size_#.r
 determ = TRUE

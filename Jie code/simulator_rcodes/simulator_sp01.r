@@ -2,13 +2,13 @@
 # example spatial points
 library(sp);library(INLA);library(RandomFields)
 library(magick); library(maptools)
-ocean<-readShapeSpatial("/Users/jiecao/Desktop/UW_work/model_devp/simulator/50m_land.shp")
-setwd('/Users/jiecao/Desktop/UW_work/model_devp/simulator')
-SimFile = ('/Users/jiecao/Desktop/UW_work/model_devp/simulator/results')
+library(rgdal)
+#ocean<-rgdal::readOGR("Jie code/simulator_rcodes/ne_50m_land/ne_50m_land.shp")
+ocean<-readShapeSpatial("Jie code/simulator_rcodes/ne_50m_land/ne_50m_land.shp")
+SimFile = ('Jie code/simulator_rcodes/results')
 SimFile = paste0(SimFile,'/',format(Sys.time(), "%d-%b-%Y %H.%M"))
 dir.create(SimFile)
-#source('Calc_Kmeans.r'); source('Calc_Anisotropic_Mesh.r'); 
-source('/Users/jiecao/Desktop/UW_work/model_devp/simulator/simulator_rcodes/grow_tran.r')
+source('Jie code/simulator_rcodes/grow_tran.r')
 
 #movement = FALSE
 set.seed(10)
@@ -38,7 +38,7 @@ sp.points = P1
 n_s = nrow(sp.points@coords)
 loc_x = P1@coords
 
-if(movement==TRUE) source('/Users/jiecao/Desktop/UW_work/model_devp/simulator/simulator_rcodes/movement.r')
+if(movement==TRUE) source('/Jie code/simulator_rcodes/movement.r')
 
 # define population structure
 n_sex = 1 # number of sexes: male
