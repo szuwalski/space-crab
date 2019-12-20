@@ -21,7 +21,7 @@ scale_g = 1.5
 library(VAST)
 strata.limits <- data.frame('STRATA'="All_areas")
 Region = "Eastern_Bering_Sea"
-Extrapolation_List = SpatialDeltaGLMM::Prepare_Extrapolation_Data_Fn( Region=Region, strata.limits=strata.limits )
+Extrapolation_List = SpatialDeltaGLMM::Prepare_Extrapolation_Data_Fn(Region=Region, strata.limits=strata.limits )
 Data_Extrap = Extrapolation_List$Data_Extrap[Extrapolation_List$Data_Extrap$Area_in_survey_km2>0,]
 coords = cbind(Data_Extrap$Lon,Data_Extrap$Lat)
 coords = coords[coords[,1]<0,]

@@ -17,11 +17,11 @@ logsigma_p = c(0.25,0.25,0.25,0.25,0.25)
 catchlogsd = 0.01 # used in EM
 plot_figures = TRUE
 
-system.time(source('/Users/jiecao/Desktop/UW_work/model_devp/SSST/Codes/spatial_size_1.r'))
+system.time(source('/Jie code/Scripts/spatial_size_1.r'))
 
 ####################### stochastic data #########################
 movement = FALSE
-source('/Users/jiecao/Desktop/UW_work/model_devp/simulator/simulator_rcodes/simulator_sp01.r')
+source('/Jie code/simulator_rcodes/simulator_sp01.r')
 
 #generate data
 sampling_error=TRUE
@@ -40,8 +40,8 @@ determ=FALSE
 iter=1
 while (iter < runtime){
   unlink("Kmeans-50.RData")
-  source('/Users/jiecao/Desktop/UW_work/model_devp/simulator/simulator_rcodes/simulator_genData.r')
-  source('/Users/jiecao/Desktop/UW_work/model_devp/SSST/Codes/spatial_size_1.r')
+  source('Jie Code/simulator_rcodes/simulator_genData.r')
+  source('Jie Code/Scripts/spatial_size_1.r')
   if(all(abs(Opt$diagnostics[,'final_gradient'])<0.001)){
     n_reps_sp[iter+1,,]=Report$Index_tp
   }

@@ -84,7 +84,7 @@ for(t in 1:n_t){
 survey_data = data_male
 colnames(survey_data)=c('size_class','year','count','lon','lat','area_swept')
 
-write.csv(survey_data,file = '/Users/jiecao/Desktop/UW_work/model_devp/SSST/Simulation_Data/survey_data.csv',row.names = FALSE)
+write.csv(survey_data,file = 'Jie code/simulation_data/survey_data.csv',row.names = FALSE)
 
 catch_data_temp = C_at_size_ns_male
 
@@ -106,7 +106,7 @@ if(sampling_error){
   }
 }
 
-write.csv(catch_data,file = '/Users/jiecao/Desktop/UW_work/model_devp/SSST/Simulation_Data/catch_data.csv')
+write.csv(catch_data,file = 'Jie code/simulation_data/catch_data.csv')
 
 
 
